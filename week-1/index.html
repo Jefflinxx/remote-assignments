@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Title</title>
+</head>
+<body>
+    
+        <nav class="navbar">
+            <a class="n-title">Website Title / Logo</a>
+            <div  class="n-u" id="n-u">
+                <a>Item 1</a>
+                <a>Item 2</a>
+                <a>Item 3</a>
+                <a>Item 4</a>
+            </div>
+            <a   class="icon" onclick="myFunction()" >
+                <i class="fa fa-bars"></i>
+              </a>
+        </nav>
+        <main>
+            <div class="m-1">
+                <h1>Welcome Message</h1>
+            </div>
+            <div class="m-2">
+                <h2>Section Title</h2>
+                <section>
+                    <h3>Content Box 1</h3>
+                </section>
+                <section>
+                    <h3>Content Box 2</h3>
+                </section>
+                <section>
+                    <h3>Content Box 3</h3>
+                </section>
+                <section>
+                    <h3>Content Box 4</h3>
+                </section>
+                <button class="m-b">Call to Action</button>
+            </div>
+            
+        </main>
+    
+
+<script>       
+function myFunction() {
+  let x = document.getElementById("n-u");
+  if (x.className === "n-u") {
+    x.className += " responsive";
+  } else {
+    x.className = "n-u";
+  }
+}
+  
+</script>
+
+</body>
+</html>
