@@ -13,6 +13,7 @@
    
    background-color: #d2d0d0;
    position: relative;
+    overflow: hidden;
    
   }
 
@@ -48,11 +49,11 @@
     justify-content: center;
     position: absolute;
     right:  0px;
-    top: 0px;
+    top: -2px;
     font-size: 30px;
     color: black;
     width: 62.5px;
-    height: 62.5px;
+    height: 62px;
   }
 
   .navbar .icon:active, .n-u a:active{
