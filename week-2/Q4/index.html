@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Title</title>
+</head>
+<body>
+    
+    <nav class="navbar">
+        <a class="n-title">Website Title / Logo</a>
+        <div  class="n-u" id="n-u">
+            <a>Item 1</a>
+            <a>Item 2</a>
+            <a>Item 3</a>
+            <a>Item 4</a>
+            <p>X</p>
+        </div>
+        <a class="icon" onclick="myFunction()" >
+            <i class="fa fa-bars"></i>
+        </a>
+    </nav>
+    <main>
+        <div class="m-1">
+            <h1>Welcome Message</h1>
+        </div>
+        <div class="m-2">
+            <h2>Section Title</h2>
+            <section><h3>Content Box 1</h3></section>
+            <section><h3>Content Box 2</h3></section>
+            <section><h3>Content Box 3</h3></section>
+            <section><h3>Content Box 4</h3></section>
+
+            <div class="button-wrapper">
+                <button class="m-b">Call to Action</button>
+            </div> 
+
+            <section class="sec2"><h3>Content Box 5</h3></section>
+            <section class="sec2"><h3>Content Box 6</h3></section>
+            <section class="sec2"><h3>Content Box 7</h3></section>
+            <section class="sec2"><h3>Content Box 8</h3></section>
+        </div>
+    </main>
+
+
+    <script>       
+
+    // 點擊換字
+    const divM1 = document.querySelector('.m-1');
+
+    divM1.addEventListener('click',()=>{
+        document.querySelector('.m-1 h1').textContent = "Have a Good Time!";
+    })
+
+    //打開menu
+    const nu = document.getElementById("n-u");
+
+    function myFunction() {
+    if (nu.className === "n-u") {
+        nu.className += " responsive";
+    } else {
+        nu.className = "n-u";
+    }
+    }
+
+    //關閉menu
+    const closeX = document.querySelector('.n-u p');
+
+    closeX.addEventListener('click',()=>{
+        nu.className = "n-u";
+    })
+
+    //call to action
+    const section2 = document.querySelectorAll('.m-2 .sec2');
+    const callToAction = document.querySelector('.m-b');
+
+    callToAction.addEventListener('click',()=>{
+        for(let section of section2){
+            section.style.display = 'flex';
+        }
+    })
+
+
+    </script>
+
+</body>
+</html>

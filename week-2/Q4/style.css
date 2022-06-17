@@ -1,0 +1,217 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+  list-style-type: none;
+}
+
+.navbar {
+   
+   /* align-items: center; */
+   /* width: 100%; */
+   
+   background-color: #d2d0d0;
+   position: relative;
+   
+}
+
+.n-title{
+  padding: 20px 0;
+  background-color: #d2d0d0;
+  display: block;
+  margin-left: 10px;
+  font-weight: bold;
+}
+.n-u{
+  display: none;
+}
+  
+.responsive{
+  display: block;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  width: 50%;
+  height: 100vh;
+  font-weight: bold;
+  background-color:rgb(255, 255, 255);
+}
+.n-u a{
+  display: block;
+  padding: 20px 0 20px 20px;
+}
+
+.n-u p{
+  font-size: 1.5rem;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.n-u p:hover{
+  cursor: pointer;
+}
+
+.navbar .icon{
+  background-color: #d2d0d0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right:  0px;
+  top: 0px;
+  font-size: 30px;
+  color: black;
+  width: 62.5px;
+  height: 62.5px;
+}
+
+.navbar .icon:active, .n-u a:active{
+  background-color: rgb(173, 173, 173);
+}
+
+
+.m-1{
+  height: 24vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(217, 236, 253);
+}
+.m-1:hover{
+  cursor: pointer;
+}
+
+
+.m-2{
+  /* width: 100%; */
+  /* height: 50vh; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.m-2 h2 {
+  
+  width: 100%;
+  text-align: center;
+  margin: 30px;
+}
+
+.m-2 section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  height: 160px;
+  background-color: rgb(152, 175, 195);
+  margin: 10px;
+}
+
+
+.button-wrapper{
+  display: flex;
+  width: 100%;
+  height: 60px;
+}
+
+
+.m-b{
+  width: 200px;
+  height: 50px;
+  border: 0;
+  background-color:rgb(217, 236, 253);
+  font-size: 20px;
+  margin: auto;
+}
+
+.m-b:hover{
+  cursor: pointer;
+}
+
+.m-2 .sec2{
+  display: none;
+}
+
+@media screen and (min-width: 500px) and (max-width: 800px){ 
+
+  .m-2 section {
+    width: 40%;
+    height: 20vw;
+  }
+  .m-b{
+    width: 200px;
+    height: 10vw;
+    max-height: 50px;
+    margin: auto;
+  }
+  
+}
+  
+@media screen and (min-width: 800px){ 
+
+/* ------------------------------
+ 這邊是全部不超過1200px的寫法   
+------------------------------ */
+    /* body{
+      display: flex;
+      justify-content: center;   
+  }
+   
+    .container{
+      max-width: 1200px; 
+  } */
+
+
+ 
+  .navbar .icon{
+    display: none;
+  }
+  
+  .n-u{
+    position: absolute;
+    top: 0px;
+    right: 20px;
+    display: block;
+    font-weight: bold;
+    background-color: #d2d0d0;
+    display: flex;
+    height: auto;
+    width: auto;
+  }
+  .n-u a{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    height: 62.5px;
+    padding: 0px 8px;      
+  }
+
+  .n-u p{
+    display: none;
+  }
+
+  .navbar .icon:hover, .n-u a:hover {
+    background-color: rgb(173, 173, 173);
+  }
+
+  .m-2{
+    max-width: 1200px; 
+    margin: 0 auto;
+  }
+
+  .m-2 section {
+    width: 45%;
+    height: 160px;
+  }
+}
+
+  
+  
+  
+  
+
+ 
