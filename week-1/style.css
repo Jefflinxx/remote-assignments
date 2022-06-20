@@ -1,54 +1,51 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
   list-style-type: none;
 }
 
 .navbar {
-   
-   /* align-items: center; */
-   /* width: 100%; */
-   
-   background-color: #d2d0d0;
-   position: relative;
-    overflow: hidden;
-   
+  /* align-items: center; */
+  /* width: 100%; */
+
+  background-color: #d2d0d0;
+  position: relative;
+  overflow: hidden;
 }
 
-.n-title{
+.n-title {
   padding: 20px 0;
-  
+
   background-color: #d2d0d0;
   display: block;
   margin-left: 10px;
   font-weight: bold;
 }
-.n-u{
+.n-u {
   display: none;
   font-weight: bold;
   background-color: rgb(217, 236, 253);
-
 }
 
-.responsive{
+.responsive {
   display: block;
 }
-.n-u a{
+.n-u a {
   display: block;
-  
-  background-color:rgba(210, 208, 208, 0.4);
+
+  background-color: rgba(210, 208, 208, 0.4);
   padding: 10px 0 10px 15px;
 }
 
-.navbar .icon{
+.navbar .icon {
   background-color: #d2d0d0;
   display: flex;
   align-items: center;
   justify-content: center;
   position: absolute;
-  right:  0px;
+  right: 0px;
   top: -2px;
   font-size: 30px;
   color: black;
@@ -56,12 +53,12 @@
   height: 62px;
 }
 
-.navbar .icon:active, .n-u a:active{
+.navbar .icon:active,
+.n-u a:active {
   background-color: rgb(173, 173, 173);
 }
 
-
-.m-1{
+.m-1 {
   height: 24vh;
   display: flex;
   align-items: center;
@@ -69,8 +66,7 @@
   background-color: rgb(217, 236, 253);
 }
 
-
-.m-2{
+.m-2 {
   /* width: 100%; */
   /* height: 50vh; */
   display: flex;
@@ -80,10 +76,9 @@
 }
 
 .m-2 h2 {
-   
-    width: 100%;
-    text-align: center;
-    margin: 30px;
+  width: 100%;
+  text-align: center;
+  margin: 30px;
 }
 
 .m-2 section {
@@ -96,36 +91,30 @@
   margin: 10px;
 }
 
-
-
-
-
-.m-b{
+.m-b {
   width: 200px;
   height: 60px;
   border: 0;
-  background-color:rgb(217, 236, 253);
+  background-color: rgb(217, 236, 253);
   font-size: 20px;
   margin-bottom: 10px;
 }
 
-@media screen and (min-width: 500px) and (max-width: 800px){ 
-
+@media screen and (min-width: 500px) and (max-width: 800px) {
   .m-2 section {
     width: 40%;
     height: 20vw;
   }
-  .m-b{
+  .m-b {
     width: 40%;
     height: 10vw;
     max-height: 160px;
     margin: 10px;
   }
 }
-  
-@media screen and (min-width: 800px){ 
 
-/* ------------------------------
+@media screen and (min-width: 800px) {
+  /* ------------------------------
 這邊是全部不超過1200px的寫法   
 ------------------------------ */
   /* body{
@@ -137,12 +126,11 @@
     max-width: 1200px; 
 } */
 
-
-  .navbar .icon{
+  .navbar .icon {
     display: none;
   }
-  
-  .n-u{
+
+  .n-u {
     position: absolute;
     top: 0px;
     right: 20px;
@@ -151,19 +139,20 @@
     background-color: #d2d0d0;
     display: flex;
   }
-  .n-u a{
+  .n-u a {
     display: flex;
     text-align: center;
     align-items: center;
     height: 62.5px;
-    padding: 0px 8px;      
+    padding: 0px 8px;
   }
-  .navbar .icon:hover, .n-u a:hover {
+  .navbar .icon:hover,
+  .n-u a:hover {
     background-color: rgb(173, 173, 173);
   }
 
-  .m-2{
-    max-width: 1200px; 
+  .m-2 {
+    max-width: 1200px;
     margin: 0 auto;
   }
 
@@ -172,10 +161,3 @@
     height: 160px;
   }
 }
-
-  
-  
-  
-  
-
- 
