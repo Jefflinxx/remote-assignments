@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>express route :</h1>
+    <form action="/getData" method="GET">
+      <label for="number">Your Number :</label>
+      <input type="text" id="number" name="number" />
+      <input type="submit" value="Submit" />
+    </form>
+
+    <h1>AJAX :</h1>
+    <form>
+      <label for="numberA">Your Number :</label>
+      <input type="text" id="numberA" name="numberA" />
+      <button id="bn" type="button">Submit</button>
+    </form>
+    <div></div>
+    <script>
+      const bn = document.getElementById("bn");
+      const numberA = document.getElementById("numberA");
+      const div = document.querySelector("div");
+
+      bn.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        const num = numberA.value;
+
+        var oReq = new XMLHttpRequest();
+        oReq.addEventListener("load", () => {
+          const result = oReq.responseText;
+          div.innerHTML = `<h2>${result}</h2>`;
+          console.log(`http://localhost:3000/getData?number=${num}`);
+        });
+        oReq.open("GET", `http://localhost:3000/getData?number=${num}`);
+        oReq.send();
+        //return false;
+      });
+    </script>
+  </body>
+</html>
