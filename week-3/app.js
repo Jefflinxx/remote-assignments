@@ -13,7 +13,7 @@ app.get("/", function (req, res) {
 
 app.get("/getData", (req, res) => {
   let { number } = req.query;
-  if (number === "") {
+  if (number === "" || number === undefined) {
     res.send("Lack of Parameter");
   } else if (isNaN(number)) {
     res.send("Wrong Parameter");
