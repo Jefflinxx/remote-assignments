@@ -1,6 +1,5 @@
 const express = require("express");
 const app = express();
-const path = require("path");
 const cookieParser = require("cookie-parser");
 
 app.use(express.static("public"));
@@ -8,7 +7,7 @@ app.use(cookieParser());
 
 //request handling
 app.get("/", function (req, res) {
-  res.sendFile(path.join(__dirname, "index.html"));
+  res.sendFile(__dirname + "/index.html");
 });
 
 app.get("/getData", (req, res) => {
@@ -36,7 +35,7 @@ app.get("/getData", (req, res) => {
 app.get("/myName", (req, res) => {
   const { name } = req.cookies;
   if (name === "") {
-    res.sendFile(path.join(__dirname, "public/cookie.html"));
+    res.sendFile(__dirname + "/public/cookie.html");
   } else if (name !== undefined) {
     res.send(name + ", Welcome!");
   } else {
