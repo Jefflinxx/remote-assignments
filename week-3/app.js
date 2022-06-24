@@ -12,7 +12,7 @@ app.get("/", function (req, res) {
 });
 
 app.get("/getData", (req, res) => {
-  let { number } = req.query;
+  const { number } = req.query;
   if (number === "" || number === undefined) {
     res.send("Lack of Parameter");
   } else if (isNaN(number)) {
@@ -21,7 +21,7 @@ app.get("/getData", (req, res) => {
     res.send("Parameter is negative.");
   } else {
     const cal = function () {
-      result = 0;
+      let result = 0;
       for (let i = 1; i <= number; i++) {
         result += i;
       }
@@ -34,8 +34,7 @@ app.get("/getData", (req, res) => {
 });
 
 app.get("/myName", (req, res) => {
-  let { name } = req.cookies;
-  console.log(name);
+  const { name } = req.cookies;
   if (name === "") {
     res.sendFile(path.join(__dirname, "public/cookie.html"));
   } else if (name !== undefined) {
@@ -46,12 +45,11 @@ app.get("/myName", (req, res) => {
 });
 
 app.get("/trackName", (req, res) => {
-  let { name } = req.query;
-  //console.log(name);
+  const { name } = req.query;
   res.cookie("name", name);
   res.redirect("/myName");
 });
 
 app.listen(3000, () => {
-  console.log("Server is running on port 3000.");
+  console.log("Server is running on http://localhost:3000.");
 });
