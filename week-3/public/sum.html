@@ -31,15 +31,13 @@
 
         const num = numberA.value;
 
-        var oReq = new XMLHttpRequest();
+        const oReq = new XMLHttpRequest();
         oReq.addEventListener("load", () => {
           const result = oReq.responseText;
           div.innerHTML = `<h2>${result}</h2>`;
-          console.log(`http://localhost:3000/getData?number=${num}`);
         });
         oReq.open("GET", `http://localhost:3000/getData?number=${num}`);
         oReq.send();
-        //return false;
       });
     </script>
   </body>
